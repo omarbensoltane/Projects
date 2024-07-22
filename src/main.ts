@@ -2,5 +2,17 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import vuetify from './plugins/vuetify'
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App)
+
+app.use(router)
+app.use(store)
+app.use(vuetify)
+
+app.mount('#app')
+window.addEventListener('storage', (event) => {
+  if (event.key === 'user' && event.newValue === null) {
+    window.location.href = '/login'
+  }
+})
