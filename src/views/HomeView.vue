@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <h1>Home</h1>
-    <v-btn @click="navigateTo('login')">Go to Login</v-btn>
+    <v-btn @click="navigateTo('login')">Go to Login Page</v-btn>
     <v-btn @click="navigateTo('profile')">Go to Profile</v-btn>
     <v-btn @click="navigateTo('user-management')">Go to User Management</v-btn>
   </v-container>
